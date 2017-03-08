@@ -1,6 +1,6 @@
 # Game3
 Daniel WIlliams & Joshua Sosa
-dtwills1@uci.edu, jhsosa@uci.edu
+dtwilli1@uci.edu, jhsosa@uci.edu
 
 Description: Our Game 3 is a competitive race car combat game. The main objective is to spread your color over as much of the map before the timer runs out. 
 
