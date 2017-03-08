@@ -8,6 +8,7 @@ public class colorInfect : NetworkBehaviour{
 	private int score2 = 0;
 	Color colorMe = Color.red;
 	Color colorHim = Color.blue;
+	public Material mat;
 
 	// Use this for initialization
 
@@ -15,6 +16,11 @@ public class colorInfect : NetworkBehaviour{
 	{
 		colorMe = GetComponent<MeshRenderer>().material.color = Color.blue;
 		colorHim = GetComponent<MeshRenderer>().material.color = Color.red;
+		gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_ColorMe", colorMe);
+		MeshRenderer[] children = GetComponentsInChildren<MeshRenderer>();
+		foreach (MeshRenderer child in children)
+			if(child.name.CompareTo("RaceC_red_body") == 0)
+				child.material = mat;
 	}
 
 	void Start () {
