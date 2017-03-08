@@ -1,0 +1,43 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   20.19.15.4463
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.212 seconds
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\System.dll (this message is harmless)
+desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.283894 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 8e0 -> priority: 1 
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.520816 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1352.
+Total: 3.576200 ms (FindLiveObjects: 0.192410 ms CreateObjectMapping: 0.091897 ms MarkObjects: 3.274252 ms  DeleteObjects: 0.016410 ms)
+
