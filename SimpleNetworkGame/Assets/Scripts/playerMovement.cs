@@ -10,13 +10,23 @@ public class playerMovement : NetworkBehaviour
 	private float unfreezeTime;
 	private MeshRenderer carBody;
 	private GameObject camera;
+	public float horzSpeed = 50f;
+	public float verSpeed = 15f;
+	public bool speedPickup = false;
+	public float gravity = 50f;
+	private SphereCollider carCollider;
 
 	public override void OnStartLocalPlayer()
 	{
 		MeshRenderer[] children = GetComponentsInChildren<MeshRenderer>();
-		foreach (MeshRenderer child in children)
-			if(child.name.CompareTo("RaceC_red_body") == 0)
+		foreach (MeshRenderer child in children) 
+			if (child.name.CompareTo ("RaceC_red_body") == 0)
 				carBody = child;
+		SphereCollider[] boxes = GetComponentsInChildren<SphereCollider>();
+		foreach (SphereCollider box in boxes)
+			if (box.name.CompareTo ("Cube") == 0)
+				carCollider = box;
+
 		camera = GameObject.FindGameObjectWithTag ("MainCamera");
 		camera.transform.parent = transform;
 		camera.transform.localPosition = new Vector3 (0f, 30f, -30f);
@@ -38,13 +48,20 @@ public class playerMovement : NetworkBehaviour
 			freeze = false;
 		}
 		if(!freeze){
-			var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-			var z = Input.GetAxis("Vertical") * 30.0f;
+			var x = Input.GetAxis ("Horizontal") * Time.deltaTime * horzSpeed;;
+			var z = Input.GetAxis("Vertical") * verSpeed;
 
 			transform.Rotate(0, x, 0);
 			GetComponent<Rigidbody> ().AddForce (transform.forward * z);
 			//transform.Translate(0, 0, z);
 		}
+		if (Input.GetKeyDown (KeyCode.LeftShift)) {
+			GetComponent<Rigidbody>().AddForce(Vector3.down*gravity);
+			carCollider.material.bounciness = 0f;
+		} 
+		if (Input.GetKeyUp(KeyCode.LeftShift)) {
+			carCollider.material.bounciness = 0.5f;
+		} 
 	}
 
 	public void freezePlayer(){

@@ -7,7 +7,7 @@ public class GameStatus : MonoBehaviour {
 	private float _oldHeight;
 	private float _fontSize = 16f;
 	private float Ratio = 20f;
-	float timeLeft = 60.0f;
+	float timeLeft = 120.0f;
 	bool displayScores = false;
 
 	void Update()
