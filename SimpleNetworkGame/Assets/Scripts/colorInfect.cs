@@ -5,9 +5,9 @@ using UnityEngine.Networking;
 
 public class colorInfect : NetworkBehaviour{
 	[SyncVar]
-	private int score1 = 0;
+	public int score1 = 0;
 	[SyncVar]
-	private int score2 = 0;
+	public int score2 = 0;
 	Color colorMe = Color.red;
 	Color colorHim = Color.blue;
 	public Material mat;
