@@ -7,37 +7,39 @@ Direct3D:
     VRAM:     2111 MB
     Driver:   20.19.15.4463
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.261 seconds
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\NotMa\Documents\Unity Projects\SimpleNetworkGame\Game3_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.424 seconds
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\NotMa\Desktop\Merge\SimpleNetworkGame\Game3_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.070148 ms
+UnloadTime: 6.225635 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1d7c -> priority: 1 
-DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
- 
-(Filename:  Line: 447)
-
-DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
- 
-(Filename:  Line: 447)
-
+  Thread -> id: 10f4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.531480 ms
+UnloadTime: 21.081009 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1335.
-Total: 4.372097 ms (FindLiveObjects: 0.246974 ms CreateObjectMapping: 0.271999 ms MarkObjects: 2.933739 ms  DeleteObjects: 0.917332 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1020.
+Total: 1.160204 ms (FindLiveObjects: 0.071794 ms CreateObjectMapping: 0.045538 ms MarkObjects: 1.028511 ms  DeleteObjects: 0.013538 ms)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.003486 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 7432.
+Total: 3.097843 ms (FindLiveObjects: 0.482461 ms CreateObjectMapping: 0.227281 ms MarkObjects: 2.357331 ms  DeleteObjects: 0.030358 ms)
 

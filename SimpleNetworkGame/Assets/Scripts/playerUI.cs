@@ -9,6 +9,8 @@ public class playerUI : NetworkBehaviour {
 	private int score;
 	private string playerName = "Their";
 	private int _scoreY = 60;
+	public bool gameOver = false;
+	public bool won = false;
 
 	private float _oldWidth;
 	private float _oldHeight;
@@ -42,6 +44,13 @@ public class playerUI : NetworkBehaviour {
 			GUI.skin.textField.fontSize = (int) _fontSize;
 			//Draw Score on screen
 			GUI.TextField (ResizeGUI(new Rect (250, _scoreY, 120, 20)), playerName + " Score: " + score.ToString ());
+		if(gameOver){
+			GUI.skin.textField.fontSize = 64;
+			if(won)
+				GUI.TextField (ResizeGUI(new Rect (100, 80, 220, 60)), "You Won!");
+			else
+				GUI.TextField (ResizeGUI(new Rect (100, 80, 220, 60)), "You Lost!");
+			}
 	}
 	//Code From http://answers.unity3d.com/questions/307330/gui-scale-guis-according-to-resolution.html
 	Rect ResizeGUI(Rect _rect)
@@ -59,5 +68,13 @@ public class playerUI : NetworkBehaviour {
 	public void updateScore(int newScore)
 	{
 		score = newScore;
+	}
+
+	public void GameOver(){
+
+	}
+
+	public int GetScore(){
+		return score;
 	}
 }

@@ -5,12 +5,11 @@ using UnityEngine.Networking;
 
 public class colorInfect : NetworkBehaviour{
 	[SyncVar]
-	public int score1 = 0;
-	[SyncVar]
-	public int score2 = 0;
+	private int score = 0;
 	Color colorMe = Color.red;
 	Color colorHim = Color.blue;
 	public Material mat;
+	GameObject scoreManager;
 
 	// Use this for initialization
 
@@ -28,10 +27,15 @@ public class colorInfect : NetworkBehaviour{
 	void Start () {
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
+	}
+
+	void updateScores(){
+		score += 10;
+		GetComponent<playerUI> ().updateScore (score);
 	}
 
 	void OnCollisionEnter(Collision collision) {
@@ -40,13 +44,7 @@ public class colorInfect : NetworkBehaviour{
 			if (!tileColor.Equals(colorMe)) {
 				if (!tileColor.Equals (colorHim)) {
 					collision.gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_Color", colorMe);
-					if (isLocalPlayer) {
-						score1 += 10;
-						GetComponent<playerUI> ().updateScore (score1);
-					} else {
-						score2 += 10;
-						GetComponent<playerUI> ().updateScore (score2);
-					}
+					updateScores ();
 				}
 				/*
 				 foreach (GameObject p in GameObject.FindGameObjectsWithTag("Player")) {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class GameStatus : NetworkBehaviour {
 	private float _oldWidth;
@@ -12,13 +13,21 @@ public class GameStatus : NetworkBehaviour {
 	public GameObject player;
 	public colorInfect win;
 	public Text winText;
+	public Text restartText;
 	float timeLeft = 1.0f;
 	bool displayScores = false;
 
+	void Awake(){
+		AudioSource[] allAudioSources =
+			UnityEngine.Object.FindObjectsOfType<AudioSource>();
+		foreach (AudioSource a in allAudioSources)
+			a.Stop ();
+		GetComponent<AudioSource> ().Play ();
+		restartText.enabled = false;
+	}
+
 	void Start(){
-		winText.enabled = false;
-		player = GameObject.FindGameObjectWithTag ("Player");
-		win = player.GetComponent<colorInfect> ();
+
 	}
 
 	void Update()
@@ -27,6 +36,7 @@ public class GameStatus : NetworkBehaviour {
 		if(timeLeft < 0)
 		{
 			GameOver();
+			Restart ();
 
 		}
 		//Code from https://forum.unity3d.com/threads/changing-text-size-relative-to-screen.102876/
@@ -39,16 +49,24 @@ public class GameStatus : NetworkBehaviour {
 	}
 	void GameOver(){
 		displayScores = true;
+		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+		GameObject winner = players[0];
+		int highScore = -1;
+		foreach (GameObject p in players) {
+			if (highScore < p.GetComponent<playerUI> ().GetScore ()) {
+				highScore = p.GetComponent<playerUI> ().GetScore ();
+				winner = p;
+				p.GetComponent<playerUI> ().gameOver = true;
+			}
+		}
+		winner.GetComponent<playerUI> ().won = true;
+	}
 
-		Debug.Log (win.score1);
-		Debug.Log (win.score2);
-		if (win.score1 > win.score2) {
-			winText.enabled = true;
-			winText.text = "You Win!";
-		} 
-		else {
-			winText.enabled = true;
-			winText.text = "You Lose!";
+	void Restart(){
+		restartText.enabled = true;
+		restartText.text = "Press 'F1' to return to Start Menu";
+		if (Input.GetKeyDown (KeyCode.F1)) {
+			SceneManager.LoadScene("Menu");
 		}
 	}
 
